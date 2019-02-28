@@ -74,7 +74,8 @@ public class POIUtil {
                     //销售日期
                     cells[2] = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy/MM/dd"));
                     //销售时间
-                    cells[3] = LocalDateTime.now().format(DateTimeFormatter.ofPattern("HHmm"));
+//                    cells[3] = LocalDateTime.now().format(DateTimeFormatter.ofPattern("HHmm"));
+                    cells[3] = "0000";
                     //单据号
                     cells[4] = "S" + FileUtils.addZeroForNum(String.valueOf(docno), 9);
                     //销售货号
