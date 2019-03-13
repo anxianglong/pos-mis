@@ -28,6 +28,7 @@ public class FileUtils {
         File file = new File("D:\\");
         File[] tempFile = file.listFiles();
         for(int i = 0; i < tempFile.length; i++){
+            System.out.println(tempFile[i].getName());
             if(tempFile[i].getName().startsWith(".anxianglong")){
                 temp = tempFile[i].getName().replace(".anxianglong","");
                 result = Integer.valueOf(temp);

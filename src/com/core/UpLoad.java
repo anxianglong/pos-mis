@@ -1,13 +1,13 @@
 package com.core;
 
+import com.util.DateUtils;
 import com.util.FileUtils;
 import com.util.POIUtil;
 
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.*;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
 
@@ -102,7 +102,7 @@ public class UpLoad {
                     }
                     str.append("\r\n");
                 }
-                String txtFileName = "D:\\B0255N02"+ LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMdd"))
+                String txtFileName = "D:\\B0255N02"+ DateUtils.formatDate(new Date(),"yyyyMMdd")
                         +".txt";
                 FileUtils.createFile(txtFileName);
                 FileWriter fileWriter = new FileWriter(txtFileName);

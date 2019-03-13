@@ -1,9 +1,8 @@
 package com.util;
 
 import java.io.*;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import org.apache.log4j.Logger;
@@ -72,10 +71,9 @@ public class POIUtil {
                     //收银机号码
                     cells[1] = "01";
                     //销售日期
-                    cells[2] = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy/MM/dd"));
+                    cells[2] =  DateUtils.formatDate(new Date(),"yyyy/MM/dd");
                     //销售时间
-//                    cells[3] = LocalDateTime.now().format(DateTimeFormatter.ofPattern("HHmm"));
-                    cells[3] = "0000";
+                    cells[3] = "0000";//DateUtils.formatDate(new Date(),"HHmm");
                     //单据号
                     cells[4] = "S" + FileUtils.addZeroForNum(String.valueOf(docno), 9);
                     //销售货号
